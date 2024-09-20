@@ -16,7 +16,6 @@ static void event_handler(lv_event_t * e)
 void example_lvgl_calendar_ui(lv_disp_t *disp)
 {
     lv_obj_t *scr = lv_disp_get_scr_act(disp);
-//    lv_obj_t  * calendar = lv_calendar_create(lv_scr_act());
     lv_obj_t  *calendar = lv_calendar_create(scr);
     lv_obj_set_size(calendar, 185, 185);
     lv_obj_align(calendar, LV_ALIGN_CENTER, 0, 27);
