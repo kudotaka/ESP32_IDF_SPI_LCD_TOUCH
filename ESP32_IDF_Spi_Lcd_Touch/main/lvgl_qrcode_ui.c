@@ -1,3 +1,5 @@
+#if CONFIG_LV_USE_QRCODE
+
 #include "lvgl.h"
 
 void example_lvgl_qrcode_ui(lv_disp_t *disp)
@@ -18,3 +20,5 @@ void example_lvgl_qrcode_ui(lv_disp_t *disp)
     lv_obj_set_style_border_color(qr, bg_color, 0);
     lv_obj_set_style_border_width(qr, 5, 0);
 }
+
+#endif

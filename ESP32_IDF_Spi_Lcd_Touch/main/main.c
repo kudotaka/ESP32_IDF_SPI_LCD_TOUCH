@@ -103,7 +103,9 @@ esp_lcd_touch_handle_t tp = NULL;
 #endif
 
 extern void example_lvgl_demo_ui(lv_disp_t *disp);
+#if CONFIG_LV_USE_QRCODE
 extern void example_lvgl_qrcode_ui(lv_disp_t *disp);
+#endif
 
 static bool example_notify_lvgl_flush_ready(esp_lcd_panel_io_handle_t panel_io, esp_lcd_panel_io_event_data_t *edata, void *user_ctx)
 {
