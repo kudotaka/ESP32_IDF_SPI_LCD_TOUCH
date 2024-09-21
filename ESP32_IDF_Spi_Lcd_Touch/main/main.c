@@ -41,8 +41,9 @@
 
 static const char *TAG = "example";
 
-#define CONFIG_LV_USE_DEMO_QRCODE (1)
+#define CONFIG_LV_USE_DEMO_QRCODE (0)
 #define CONFIG_LV_USE_DEMO_CALENDAR (0)
+#define CONFIG_LV_USE_DEMO_TEXT (1)
 
 // Using SPI2 in the example
 #define LCD_HOST  SPI2_HOST
@@ -108,6 +109,7 @@ esp_lcd_touch_handle_t tp = NULL;
 extern void example_lvgl_demo_ui(lv_disp_t *disp);
 extern void example_lvgl_qrcode_ui(lv_disp_t *disp);
 extern void example_lvgl_calendar_ui(lv_disp_t *disp);
+extern void example_lvgl_text_ui(lv_disp_t *disp);
 
 static bool example_notify_lvgl_flush_ready(esp_lcd_panel_io_handle_t panel_io, esp_lcd_panel_io_event_data_t *edata, void *user_ctx)
 {
@@ -422,6 +424,8 @@ void app_main(void)
         example_lvgl_qrcode_ui(disp);
 #elif CONFIG_LV_USE_DEMO_CALENDAR
         example_lvgl_calendar_ui(disp);
+#elif CONFIG_LV_USE_DEMO_TEXT
+        example_lvgl_text_ui(disp);
 #else
         example_lvgl_demo_ui(disp);
 #endif
