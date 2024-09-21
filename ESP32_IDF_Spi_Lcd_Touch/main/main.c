@@ -41,7 +41,7 @@
 
 static const char *TAG = "example";
 
-#define CONFIG_LV_USE_DEMO_QRCODE (0)
+#define CONFIG_LV_USE_DEMO_QRCODE (1)
 #define CONFIG_LV_USE_DEMO_CALENDAR (0)
 
 // Using SPI2 in the example
